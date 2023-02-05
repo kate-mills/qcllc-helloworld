@@ -6,18 +6,11 @@ export default function Home() {
   return (
     <Layout>
       <article>
+      <h2>Contact Us</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac
-          rhoncus quam.
+          Contact Blah 
         </p>
-        <p>
-          Fringilla quam urna. Cras turpis elit, euismod eget ligula quis,
-          imperdiet sagittis justo. In viverra fermentum ex ac vestibulum.
-          Aliquam eleifend nunc a luctus porta. Mauris laoreet augue ut felis
-          blandit, at iaculis odio ultrices. Nulla facilisi. Vestibulum cursus
-          ipsum tellus, eu tincidunt neque tincidunt a.
-        </p>
-        <h2>Sub-header</h2>
+        <h2>Contact Sub-Header</h2>
         <p>
           In eget sodales arcu, consectetur efficitur metus. Duis efficitur
           tincidunt odio, sit amet laoreet massa fringilla eu.
