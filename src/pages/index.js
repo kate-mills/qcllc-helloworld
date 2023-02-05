@@ -1,11 +1,16 @@
 import * as React from 'react'
+import { graphql } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import Layout from '../components/layout'
 
-export default function Home() {
+export default function Home({data}) {
+  const image = getImage(data.file)
+
   return (
     <Layout>
       <article>
+    <GatsbyImage image={image} alt=""/>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac
           rhoncus quam.
@@ -78,3 +83,19 @@ export default function Home() {
     </Layout>
   )
 }
+
+
+export const query = graphql`
+  {
+    file(relativePath: {eq: "hero.jpg"}) {
+      size
+      childImageSharp {
+        gatsbyImageData(
+          width: 960
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+  }
+`
