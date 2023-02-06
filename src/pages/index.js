@@ -10,7 +10,7 @@ export default function Home({data}) {
   return (
     <Layout>
       <article>
-    <GatsbyImage image={image} alt=""/>
+    <GatsbyImage image={image} alt="" style={{margin: '0 auto', width: '100%'}}/>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac
           rhoncus quam.
@@ -91,7 +91,6 @@ export const query = graphql`
       size
       childImageSharp {
         gatsbyImageData(
-          width: 960
           placeholder: BLURRED
           formats: [AUTO, WEBP, AVIF]
         )
