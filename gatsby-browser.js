@@ -16,7 +16,6 @@ export const shouldUpdateScroll = ({
     )
   } else {
     const savedPosition = getSavedScrollPosition(location) || [0, 0]
-    console.log('savedPosition', savedPosition)
     window.setTimeout(
       () => window.scrollTo({ ...savedPosition, behavior: 'smooth' }),
       0
