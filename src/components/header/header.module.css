@@ -5,3 +5,14 @@ header#header {
   top: 0;
   z-index: 1;
 }
+header#header a {
+  color: var(--black);
+  display: block;
+  text-decoration: none;
+}
+header#header a::after {
+  display:block;
+  position: relative;
+  font-size: 0.74rem;
+  content: 'Your Logo';
+}
