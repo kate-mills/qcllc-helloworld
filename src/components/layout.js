@@ -1,7 +1,6 @@
 import * as React from 'react'
 /*https://docs.pmnd.rs/react-three-fiber/getting-started/examples#basic-examples*/
 
-import PropTypes from 'prop-types'
 import { motion } from 'framer-motion'
 
 import './layout.css'
@@ -31,10 +30,6 @@ const Layout = ({ children }) => {
       </div>
     </>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout
