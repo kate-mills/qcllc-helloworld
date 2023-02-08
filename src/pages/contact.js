@@ -1,11 +1,13 @@
 import * as React from 'react'
 
 import Layout from '../components/layout'
+import Map from '../components/map'
 
 export default function Home() {
   return (
     <Layout>
       <article>
+    <Map/>
       <h2>Contact Us</h2>
         <p>
           Contact Blah 

@@ -1,34 +1,54 @@
 import * as React from 'react'
 /*https://docs.pmnd.rs/react-three-fiber/getting-started/examples#basic-examples*/
 
-import { motion } from 'framer-motion'
-
-import './layout.css'
-
 import { Header } from './header'
 import { Footer } from './footer'
 
-const Layout = ({ children }) => {
+import { Flex, Spacer, Box } from '@chakra-ui/react'
+import { motion } from 'framer-motion'
+
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { useStaticQuery, graphql } from 'gatsby'
+
+import './layout.css'
+
+const query = graphql`
+  {
+    hero: file(relativePath: { eq: "hero.jpg" }) {
+      size
+      childImageSharp {
+        gatsbyImageData(
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+          layout: FULL_WIDTH
+        )
+      }
+    }
+  }
+`
+const Layout = ({ children, ...rest }) => {
+  const { showHero } = rest
+  const data = useStaticQuery(query)
   return (
-    <>
+    <Flex direction={['column']}>
       <Header />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: '100%',
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <motion.main
+      {!!showHero ? <GatsbyImage image={getImage(data.hero)} alt="Property built by Quality Construction LLC" /> : null}
+      <Flex direction={['row']}>
+        <Spacer />
+        <Box
+          color="var(--clr-primary)"
+          w="60%"
+          as={motion.main}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ type: 'tween', duration: 1 }}
         >
           {children}
-        </motion.main>
-        <Footer />
-      </div>
-    </>
+        </Box>
+        <Spacer />
+      </Flex>
+      <Footer />
+    </Flex>
   )
 }
 

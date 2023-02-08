@@ -1,17 +1,16 @@
 header#header {
-  background: var(--background);
+  background: #ffffff;
   padding: 20px;
   position: sticky;
   top: 0;
   z-index: 1;
 }
 header#header a {
-  color: var(--black);
   display: block;
   text-decoration: none;
 }
 header#header a::after {
-  display:block;
+  display: block;
   position: relative;
   font-size: 0.74rem;
   content: 'Your Logo';
