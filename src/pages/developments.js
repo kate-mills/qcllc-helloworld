@@ -4,26 +4,30 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Card from '../components/card'
 
-import { Wrap, WrapItem, VStack, Box, StackDivider } from '@chakra-ui/react'
+import { Wrap, WrapItem} from '@chakra-ui/react'
 
 
 export default function Home({ data }) {
-  //const image = getImage(data.file)
-
-  //console.log(data)
   return (
     <Layout>
-    {/*<GatsbyImage image={image} alt="Offices built by QCLLC"/>*/}
       <article>
+        <Wrap gap={'1'} justify={'space-between'} align="center">
+          <WrapItem
+            as={Card}
+            url={data.file.publicURL}
+            city="Gilroy"
+            address="6920 Monterey Rd"
+    title="Innovative solutions for modern construction challenges"
+            units="200 units"/>
+          <WrapItem
+            as={Card}
+            url={`https://images.unsplash.com/photo-1524414139215-35c99f80112d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80`}
+            city={'Davenport, FL'}
+            address="41 acres in Davenport FL"
+            units={'41 units'} />
 
 
-<VStack divider={<StackDivider borderColor='gray.200' />} spacing={4} align='stretch' > <Box h='40px' bg='yellow.200'> Ready to start your dream home? Contact us today to get started!  Don't wait any longer to upgrade your commercial space. Request a free consultation now.  </Box> <Box h='40px' bg='tomato'> Need a reliable and experienced construction team for your next project? Look no further. Call us today.  </Box> <Box h='40px' bg='pink.100'> Get a free estimate on your construction project. Contact us to schedule a consultation.  </Box> <Box h='40px' bg='grey.100'> Let us help you bring your vision to life. Schedule a consultation with our team today.  </Box> </VStack>
-
-    <Wrap gap={'1'} justify={'space-between'} align='center'>
-        <WrapItem as={Card} url={data.file.publicURL} />
-        <WrapItem as={Card} url={data.file.publicURL} />
-        <WrapItem as={Card} url={data.file.publicURL} />
-    </Wrap>
+        </Wrap>
       </article>
     </Layout>
   )

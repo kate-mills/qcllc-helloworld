@@ -9,10 +9,11 @@ export default function Contact() {
     <Layout>
       <article>
         <Map />
-
-        <Stack spacing={2}>
+        <Stack>
     <Box height="20px"/>
-          <Text as="h2">QUALITY CONSTRUCTION LLC</Text>
+          <Text lineHeight="tight"as="h4" fontWeight="semibold" noOfLines={1}>
+      QUALITY CONSTRUCTION LLC
+    </Text>
           <Text as="address"> 1650 ZANKERS RD STE 230 SAN JOSE, CA 95112 </Text>
           <Text as="a" href="tel:+14086398516">(408) 639-8516</Text>
         </Stack>
