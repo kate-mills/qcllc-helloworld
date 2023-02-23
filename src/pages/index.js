@@ -1,10 +1,12 @@
 import * as React from 'react'
-import { graphql, Link } from 'gatsby'
+import {graphql} from 'gatsby'
 import Layout from '../components/layout'
+import ImgCard  from '../components/imgcard'
 
 import { VStack, Box, StackDivider } from '@chakra-ui/react'
 
 export default function Home({ data }) {
+  console.log(data)
   return (
     <Layout hero={data.hero}>
       <article>
@@ -15,15 +17,8 @@ export default function Home({ data }) {
             <Box h="30px"/>
             <Box h="30px"/>
         </VStack>
+    <ImgCard url={data.file.publicURL} heading={'Innovative solutions for modern construction challenges'}/>
 
-        <VStack
-          divider={<StackDivider borderColor="gray.200" />}
-          spacing={2}
-          align="stretch"> 
-          <Box h="auto" bg="themeblue.100">Let us help you bring your vision to life.
-            <Link to="/contact">Schedule a consultation with our team today.</Link>
-    </Box>
-        </VStack>
       </article>
     </Layout>
   )
