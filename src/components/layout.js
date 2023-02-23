@@ -8,33 +8,17 @@ import { Flex, Spacer, Box } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import { useStaticQuery, graphql } from 'gatsby'
 
 import './layout.css'
 
-const query = graphql`
-  {
-    hero: file(relativePath: { eq: "hero.jpg" }) {
-      size
-      childImageSharp {
-        gatsbyImageData(
-          placeholder: BLURRED
-          formats: [AUTO, WEBP, AVIF]
-          layout: FULL_WIDTH
-        )
-      }
-    }
-  }
-`
 const Layout = ({ children, ...rest }) => {
-  const { showHero } = rest
-  const data = useStaticQuery(query)
+  const { hero } = rest
   return (
     <Flex direction="column" id="flex-layout">
       <Header />
-      {!!showHero ? (
+      {!!hero ? (
         <GatsbyImage
-          image={getImage(data.hero)}
+          image={getImage(hero)}
           alt="Property built by Quality Construction LLC"
         />
       ) : null}

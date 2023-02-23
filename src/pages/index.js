@@ -1,15 +1,13 @@
 import * as React from 'react'
 import { graphql, Link } from 'gatsby'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from '../components/layout'
 import Card from '../components/card'
 
 import { Wrap, WrapItem, VStack, Box, StackDivider } from '@chakra-ui/react'
 
 export default function Home({ data }) {
-  const image = getImage(data.file)
   return (
-    <Layout showHero>
+    <Layout hero={data.hero}>
       <article>
         <VStack
           divider={<StackDivider borderColor="gray.200" />}
@@ -47,5 +45,15 @@ export const query = graphql`
         gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }
     }
+    hero: file(relativePath: { eq: "hero.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+          layout: FULL_WIDTH
+        )
+      }
+    }
   }
+
 `
