@@ -30,14 +30,19 @@ const Layout = ({ children, ...rest }) => {
   const { showHero } = rest
   const data = useStaticQuery(query)
   return (
-    <Flex direction={['column']}>
+    <Flex direction="column" id="flex-layout">
       <Header />
-      {!!showHero ? <GatsbyImage image={getImage(data.hero)} alt="Property built by Quality Construction LLC" /> : null}
+      {!!showHero ? (
+        <GatsbyImage
+          image={getImage(data.hero)}
+          alt="Property built by Quality Construction LLC"
+        />
+      ) : null}
       <Flex direction={['row']}>
         <Spacer />
         <Box
-          color="var(--clr-primary)"
-          w="60%"
+          color="primary"
+          w="65%"
           as={motion.main}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

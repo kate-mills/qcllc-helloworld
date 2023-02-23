@@ -22,12 +22,11 @@ export default function Header() {
         </Text>{' '}
       </Box>
       <Spacer />
-
       <ButtonGroup gap="2">
-        <Button as={Link} to="/" bg="white" color="black" size="xs">
+        <Button as={Link} to="/contact" size="xs">
           Contact
         </Button>
-        <Button as={Link} to="/contact" bg="white" color="black" size="xs">
+        <Button as={Link} to="/developments" size="xs">
           Developments
         </Button>
       </ButtonGroup>
