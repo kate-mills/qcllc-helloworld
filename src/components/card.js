@@ -17,6 +17,7 @@ export default function Card(props) {
         <Box display="flex" alignItems="baseline">
           <Badge borderRadius="full" px="2" colorScheme="blackAlpha">New</Badge>
           <Box
+            noOfLines={1}
             color="gray.500"
             fontWeight="semibold"
             letterSpacing="wide"
