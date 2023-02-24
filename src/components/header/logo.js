@@ -1,6 +1,4 @@
 import * as React from 'react'
-import { IconButton } from '@chakra-ui/react'
-
 const Logo = () => {
   return (
     <>
