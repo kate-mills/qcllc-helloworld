@@ -18,7 +18,6 @@ export default function Header() {
       minWidth="max-content"
       alignItems="center"
       gap="2"
-      boxShadow="xs"
     >
       <Box p="2"><Heading size="md" color="#33333354"><Link to="/">qcllc</Link>
     </Heading>
