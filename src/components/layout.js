@@ -3,11 +3,12 @@ import * as React from 'react'
 
 import { Header } from './header'
 import { Footer } from './footer'
+import BgImage  from '../components/backgroundimage'
 
 import { Flex, Spacer, Box } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+//import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 import './layout.css'
 
@@ -16,12 +17,9 @@ const Layout = ({ children, ...rest }) => {
   return (
     <Flex direction="column" id="flex-layout">
       <Header />
-      {!!hero ? (
-        <GatsbyImage
-          image={getImage(hero)}
-          alt="Property built by Quality Construction LLC"
-        />
-      ) : null}
+
+    {!!hero ?<BgImage image={hero}/>: null }
+    
       <Flex direction={['row']}>
         <Spacer />
         <Box

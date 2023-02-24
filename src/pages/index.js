@@ -8,7 +8,7 @@ import { VStack, Box, StackDivider } from '@chakra-ui/react'
 export default function Home({ data }) {
   console.log(data)
   return (
-    <Layout hero={data.hero}>
+    <Layout hero={data.file.publicURL}>
       <article>
         <VStack
           divider={<StackDivider borderColor="gray.200" />}
@@ -17,9 +17,12 @@ export default function Home({ data }) {
             <Box h="30px"/>
             <Box h="30px"/>
         </VStack>
-    <ImgCard url={data.file.publicURL} heading={'Innovative solutions for modern construction challenges'}/>
+        <ImgCard url={data.file.publicURL} headingText={'Building for the future with sustainability in mind'}
+    bodyText={`About Us: A brief history of the company, its mission statement, and any relevant background information about the company’s founders and leadership team.`}
+    />
 
       </article>
+
     </Layout>
   )
 }

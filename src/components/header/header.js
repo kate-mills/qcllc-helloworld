@@ -19,15 +19,14 @@ export default function Header() {
       alignItems="center"
       gap="2"
       boxShadow="xs"
-      bg="white"
+      bg="gray"
+    backgroundColor={'#f6f6f6'}
+
     >
-
-
       <Box p="2">
-        {' '}
-        <Heading size="md">
+        <Heading size="md" color="gray.800">
    <Link to="/"> Quality Construction LLC.</Link>
-    </Heading>{' '}
+    </Heading>
 
 
 
@@ -37,10 +36,10 @@ export default function Header() {
       </Box>
       <Spacer />
       <ButtonGroup gap="2">
-        <Button as={Link} to="/contact" bg="white" size="sm">
+        <Button as={Link} to="/contact" colorScheme={"blackAlpha"} size="sm">
           Contact
         </Button>
-        <Button as={Link} to="/developments" bg="white" size="sm">
+        <Button as={Link} to="/developments" colorScheme={'blackAlpha'} size="sm">
           Developments
         </Button>
       </ButtonGroup>
