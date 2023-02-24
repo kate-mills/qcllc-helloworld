@@ -8,8 +8,8 @@ export default function Contact() {
   return (
     <Layout>
       <article>
+        <Stack paddingTop="7rem">
         <Map />
-        <Stack>
     <Box height="20px"/>
           <Text lineHeight="tight"as="h4" fontWeight="semibold" noOfLines={1}>
       QUALITY CONSTRUCTION LLC

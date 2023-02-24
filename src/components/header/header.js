@@ -19,13 +19,8 @@ export default function Header() {
       alignItems="center"
       gap="2"
       boxShadow="xs"
-      bg="gray"
-    backgroundColor={'#f6f6f6'}
-
     >
-      <Box p="2">
-        <Heading size="md" color="gray.800">
-   <Link to="/"> Quality Construction LLC.</Link>
+      <Box p="2"><Heading size="md" color="#33333354"><Link to="/">Logo</Link>
     </Heading>
 
 

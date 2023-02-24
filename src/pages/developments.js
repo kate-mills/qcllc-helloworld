@@ -4,17 +4,17 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Card from '../components/card'
 
-import { Wrap, WrapItem} from '@chakra-ui/react'
-
+import {Stack, Wrap, WrapItem} from '@chakra-ui/react'
 
 export default function Home({ data }) {
   return (
     <Layout>
       <article>
+        <Stack paddingTop="7rem">
         <Wrap gap={'1'} justify={'space-between'} align="center">
           <WrapItem
             as={Card}
-            url={data.file.publicURL}
+            url={data.hero.publicURL}
             city="Gilroy"
             address="6920 Monterey Rd"
     title="Innovative solutions for modern construction challenges"
@@ -28,6 +28,7 @@ export default function Home({ data }) {
 
 
         </Wrap>
+    </Stack>
       </article>
     </Layout>
   )
@@ -35,11 +36,8 @@ export default function Home({ data }) {
 
 export const query = graphql`
   {
-    file(relativePath: { eq: "hero.jpg" }) {
+    hero:file(relativePath: { eq: "hero.jpg" }) {
       publicURL
-      childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
-      }
     }
   }
 `
