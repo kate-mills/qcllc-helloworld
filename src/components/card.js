@@ -15,7 +15,7 @@ export default function Card(props) {
       <Image src={props.url || property.imageUrl} alt={property.imageAlt} />
       <Box p="6">
         <Box display="flex" alignItems="baseline">
-          <Badge borderRadius="full" px="2" colorScheme="teal">New</Badge>
+          <Badge borderRadius="full" px="2" colorScheme="green">New</Badge>
           <Box
             color="gray.500"
             fontWeight="semibold"
