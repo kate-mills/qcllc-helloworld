@@ -13,12 +13,14 @@ import {
 export default function Header() {
   return (
     <Flex
-      p={5}
+      padding={3}
+      py={1}
       as="header"
       minWidth="max-content"
       alignItems="center"
       gap="2"
       colorScheme="blackAlpha"
+      bg="#f6f6f6"
     >
       <Box p="2"><Heading size="md" color="#33333354"><Link to="/">qcllc</Link>
     </Heading>
