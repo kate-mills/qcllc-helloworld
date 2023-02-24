@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import { Link } from 'gatsby'
 
-import { Flex, Wrap,WrapItem, Box, Spacer, Text, Button, ButtonGroup } from '@chakra-ui/react'
+import { Flex, WrapItem, Text, Button } from '@chakra-ui/react'
 
 export default function Footer() {
   return (
