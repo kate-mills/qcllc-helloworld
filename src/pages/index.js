@@ -4,7 +4,6 @@ import Layout from '../components/layout'
 import ImgCard from '../components/imgcard'
 
 import {
-  Text,
   OrderedList,
   ListItem,
   VStack,

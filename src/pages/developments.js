@@ -22,7 +22,7 @@ export default function Home({ data }) {
             />
             <WrapItem
               as={Card}
-              url={`https://images.unsplash.com/photo-1524414139215-35c99f80112d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80`}
+              url={data.building.publicURL}
               city={'Davenport'}
               address="41 acres in Davenport FL"
               units={'41 acres'}
@@ -36,8 +36,7 @@ export default function Home({ data }) {
 
 export const query = graphql`
   {
-    hero: file(relativePath: { eq: "hero.jpg" }) {
-      publicURL
-    }
+    hero: file(relativePath: { eq: "hero.jpg" }) { publicURL }
+    building: file(relativePath: { eq: "pic2.jpg" }) { publicURL }
   }
 `
