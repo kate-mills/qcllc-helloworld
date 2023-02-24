@@ -24,10 +24,10 @@ export default function Home({ data }) {
             imgWidth="40%"
             headingText={'Building for the future with sustainability in mind'}
 
-            bodyText={`Below are some ideas to get us started. For example, a good website structure for a commercial construction company could include the following pages:`}
+            bodyText={`Below are some ideas to get us started.`}
           />
           <Box>
-            <Text fontSize="2xl" fontWeight="bold" pb={'0.75rem'}>A good website structure could include the following pages:</Text>
+            <Text fontSize="xl" fontWeight="bold" pb={'0.75rem'}>For example, a good website structure for a commercial construction company could include the following pages:</Text>
             <OrderedList spacing="3">
               <ListItem>
                 <b>About Us:</b> A brief history of the company, its mission
