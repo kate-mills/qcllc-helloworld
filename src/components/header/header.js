@@ -20,14 +20,8 @@ export default function Header() {
       gap="2"
       boxShadow="xs"
     >
-      <Box p="2"><Heading size="md" color="#33333354"><Link to="/">Logo</Link>
+      <Box p="2"><Heading size="md" color="#33333354"><Link to="/">qcllc</Link>
     </Heading>
-
-
-
-
-
-
       </Box>
       <Spacer />
       <ButtonGroup gap="2">
