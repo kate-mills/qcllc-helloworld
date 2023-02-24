@@ -1,9 +1,11 @@
 import * as React from 'react'
+import { IconButton } from '@chakra-ui/react'
 
 const Logo = () => {
   return (
     <>
       <svg
+        style={{ display: 'unset' }}
         stroke="currentColor"
         fill="darkgrey"
         strokeWidth="0"
@@ -16,7 +18,7 @@ const Logo = () => {
       </svg>
 
       <svg
-        style={{ position: 'relative', right: '.73rem'}}
+        style={{ position: 'relative', right: '.73rem', display: 'unset' }}
         stroke="darkgrey"
         fill="none"
         strokeWidth="2"
