@@ -10,7 +10,7 @@ export default function Home({ data }) {
   return (
     <Layout>
       <article>
-        <Stack paddingTop="7rem">
+        <Stack className="page-padding-top">
         <Wrap gap={'1'} justify={'space-between'} align="center">
           <WrapItem
             as={Card}

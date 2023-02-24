@@ -1,19 +1,17 @@
 body {
-  padding-top: 2vh;
+  padding-top: 2px;
   background: #f6f6f6 !important;
 }
 main {
-  position: relative;
   padding-bottom: 30vh;
   margin-bottom: 10px;
+  position: relative;
 }
 header {
   position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
   z-index: 3;
-  background: #f6f6f6;
+  background: #f6f6f698;
 }
 footer {
   position: fixed;
@@ -36,4 +34,7 @@ footer {
   overflow: hidden;
   text-overflow: ellipsis;
   overflow-wrap: normal;
+}
+.page-padding-top{
+  padding-top: 2rem;
 }
