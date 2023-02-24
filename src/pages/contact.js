@@ -10,9 +10,7 @@ export default function Contact() {
       <article>
         <Stack className="page-padding-top">
           <Map />
-          <Box height="20px" />
-
-          <Box bg="var(--chakra-colors-blackAlpha-100)" maxW='100%' borderWidth='1px' borderRadius='lg' overflow='hidden' padding={4}>
+          <Box maxW='100%' overflow='hidden' padding={9}  pl={4}>
           <Text mb={3} as="h4" fontWeight="semibold" noOfLines={1}>
             QUALITY CONSTRUCTION LLC
           </Text>
