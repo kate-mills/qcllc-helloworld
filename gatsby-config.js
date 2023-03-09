@@ -8,7 +8,6 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 
-
 /*
  QUALITY CONSTRUCTION LLC
 1650 ZANKERS RD STE 230
@@ -36,6 +35,12 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, // Needed for dynamic images
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Add any options here
+      },
+    },
     {
       resolve: `@chakra-ui/gatsby-plugin`,
       options: {
