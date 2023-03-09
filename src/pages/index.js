@@ -13,21 +13,25 @@ import {
 } from '@chakra-ui/react'
 
 export default function Home({ data }) {
-  console.log(data)
   return (
-    <Layout hero={data.file.publicURL}>
+    <Layout hero={data.heroImg.publicURL}>
       <article>
         <Box h="50px" />
         <VStack divider={<StackDivider />} spacing={'8'} align="stretch">
           <ImgCard
+             backgroundColor={''}
             url={data.file.publicURL}
-            imgWidth="40%"
+            imgWidth='60%'
             headingText={'Building for the future with sustainability in mind'}
-
+            style={{ clipPath: 'polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%)'}}
             bodyText={`Below are some ideas to get us started.`}
+
           />
           <Box>
-            <Text fontSize="xl" fontWeight="bold" pb={'0.75rem'}>For example, a good website structure for a commercial construction company could include the following pages:</Text>
+            <Text fontSize="xl" fontWeight="bold" pb={'0.75rem'}>
+              For example, a good website structure for a commercial
+              construction company could include the following pages:
+            </Text>
             <OrderedList spacing="3">
               <ListItem>
                 <b>About Us:</b> A brief history of the company, its mission
@@ -68,9 +72,12 @@ export default function Home({ data }) {
             </OrderedList>
           </Box>
           <ImgCard
+    showImg="right"
             url={data.future.publicURL}
             imgWidth="40%"
-            headingText={ 'Exceeding expectations in every project we undertake.' }
+            headingText={
+              'Exceeding expectations in every project we undertake.'
+            }
             bodyText={`A brief history of the company, its mission statement, and any relevant background information about the company’s founders and leadership team.`}
           />
         </VStack>
@@ -81,7 +88,7 @@ export default function Home({ data }) {
 
 export const query = graphql`
   {
-    file(relativePath: { eq: "hero.jpg" }) {
+    file(relativePath: { eq: "hero-burn.jpg" }) {
       publicURL
       childImageSharp {
         gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
@@ -94,7 +101,7 @@ export const query = graphql`
       }
     }
 
-    hero: file(relativePath: { eq: "hero.jpg" }) {
+    hero: file(relativePath: { eq: "hero-burn.jpg" }) {
       childImageSharp {
         gatsbyImageData(
           placeholder: BLURRED
@@ -102,6 +109,9 @@ export const query = graphql`
           layout: FULL_WIDTH
         )
       }
+    }
+    heroImg: file(relativePath: { eq: "on-site.jpg" }) {
+      publicURL
     }
   }
 `

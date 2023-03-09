@@ -20,21 +20,26 @@ footer {
   right: 0;
   padding: 1rem;
 }
-.bgimg h2 {
-  position: relative;
-  color: #fff;
-  font-size: 2.2rem;
-  padding: 15vw;
+.bgimg {
+  background: linear-gradient(184deg, black, transparent);
+}
+.bgimg h2{
   text-align: center;
-  line-height: 1.2;
-  background: linear-gradient(0deg, #0000003d, #0a0300ab 40%, #0000001d);
+  color: var(--chakra-colors-whiteAlpha-900);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-style: italic;
-  font-weight: 500;
-  z-index: 2;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  overflow-wrap: normal;
 }
 .page-padding-top{
   padding-top: 2rem;
+}
+
+.triangle{
+  background: url(../images/hero-burn.jpg) no-repeat center center;
+  width: 250px;
+  height:250px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  clip-path: polygon(0 0, 0 100%, 100% 45%);
 }

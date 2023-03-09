@@ -17,9 +17,8 @@ const Layout = ({ children, ...rest }) => {
   return (
     <Flex direction="column" id="flex-layout">
       <Header />
+      {!!hero ?  <BgImage image={hero}/> : null }
 
-    {!!hero ?<BgImage image={hero}/>: null }
-    
       <Flex direction={['row']}>
         <Spacer />
         <Box
