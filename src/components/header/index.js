@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-import ContactInfo from '../contact-disclosure'
+import ContactDisclosure from '../contact-disclosure'
 
 import {
   Flex,
@@ -26,7 +26,7 @@ export const Header = () => {
       </Box>
       <Spacer />
       <ButtonGroup gap="2">
-    <ContactInfo/>
+    <ContactDisclosure/>
         <Button
           as={Link}
           to="/developments"

@@ -1,12 +1,12 @@
 import React from 'react'
 import {  Button, Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody, Box, Stack,useDisclosure } from '@chakra-ui/react'
 
-const ContactDisclosure = () => {
+const ContactDisclosure = ({btnText="Contact Us", btnSize='xs'}) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
     <>
-      <Button onClick={onOpen} size="xs">Contact Us</Button>
+      <Button onClick={onOpen} size={btnSize}>{btnText}</Button>
       <Drawer placement="right" onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
         <DrawerContent>
