@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 import { AnimatePresence } from 'framer-motion'
 
 export const wrapPageElement = ({ element }) => (
@@ -22,4 +22,4 @@ export const shouldUpdateScroll = ({
     )
   }
   return false
-}
+}*/

@@ -20,14 +20,17 @@ export default function Home({ data }) {
         <Box h="50px" />
         <VStack divider={<StackDivider />} spacing={'8'} align="stretch">
           <ImgCard
-            url={data.file.publicURL}
+            url={data.hero.publicURL}
             imgWidth="40%"
             headingText={'Building for the future with sustainability in mind'}
-
             bodyText={`Below are some ideas to get us started.`}
           />
+
           <Box>
-            <Text fontSize="xl" fontWeight="bold" pb={'0.75rem'}>For example, a good website structure for a commercial construction company could include the following pages:</Text>
+            <Text fontSize="xl" fontWeight="bold" pb={'0.75rem'}>
+              For example, a good website structure for a commercial
+              construction company could include the following pages:
+            </Text>
             <OrderedList spacing="3">
               <ListItem>
                 <b>About Us:</b> A brief history of the company, its mission
@@ -70,7 +73,9 @@ export default function Home({ data }) {
           <ImgCard
             url={data.future.publicURL}
             imgWidth="40%"
-            headingText={ 'Exceeding expectations in every project we undertake.' }
+            headingText={
+              'Exceeding expectations in every project we undertake.'
+            }
             bodyText={`A brief history of the company, its mission statement, and any relevant background information about the company’s founders and leadership team.`}
           />
         </VStack>
@@ -81,7 +86,7 @@ export default function Home({ data }) {
 
 export const query = graphql`
   {
-    file(relativePath: { eq: "hero.jpg" }) {
+    file(relativePath: { eq: "on-site.jpg" }) {
       publicURL
       childImageSharp {
         gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
@@ -95,6 +100,7 @@ export const query = graphql`
     }
 
     hero: file(relativePath: { eq: "hero.jpg" }) {
+      publicURL
       childImageSharp {
         gatsbyImageData(
           placeholder: BLURRED
