@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-import ContactInfo from './contact-info'
+import ContactInfo from '../contact-disclosure'
 
 import {
   Flex,
