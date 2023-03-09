@@ -1,7 +1,7 @@
 import React from 'react'
 import {  Button, Drawer, DrawerOverlay, DrawerContent, DrawerHeader, DrawerBody, Box, Stack,useDisclosure } from '@chakra-ui/react'
 
-const ContactInfo = () => {
+const ContactDisclosure = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
@@ -30,4 +30,4 @@ const ContactInfo = () => {
   )
 }
 
-export default ContactInfo 
+export default ContactDisclosure 
