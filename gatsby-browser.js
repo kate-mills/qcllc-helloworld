@@ -1,5 +1,6 @@
-/*import React from 'react'
+import React from 'react'
 import { AnimatePresence } from 'framer-motion'
+import './src/components/layout.css'
 
 export const wrapPageElement = ({ element }) => (
   <AnimatePresence wait>{element}</AnimatePresence>
@@ -22,4 +23,4 @@ export const shouldUpdateScroll = ({
     )
   }
   return false
-}*/
+}

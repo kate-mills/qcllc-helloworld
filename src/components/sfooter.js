@@ -1,7 +1,7 @@
-import React, { Component } from "react"
-import styled from "styled-components"
-import { styles } from "../utils"
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa"
+import React, { Component } from 'react'
+import styled from 'styled-components'
+import { styles } from '../utils'
+import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa'
 
 export default class Footer extends Component {
   state = {
@@ -26,7 +26,7 @@ export default class Footer extends Component {
   render() {
     return (
       <FooterWrapper>
-        <div className="title">QCLLC</div>
+        <div className="title">QUALITY</div>
         <div className="icons">
           {this.state.icons.map(item => {
             return (
@@ -45,12 +45,34 @@ export default class Footer extends Component {
 }
 const FooterWrapper = styled.footer`
   padding: 2rem 0;
-  background: ${styles.colors.mainBlack};
+  position: fixed;
+  background-image: radial-gradient(
+    rgba(0, 0, 0, 0) 1px,
+    gray 1px
+  );
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-size: 4px 4px;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  -moz-backdrop-filter: blur(3px);
   .icons {
     width: 10rem;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
+  }
+  ::before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--chakra-colors-black);
+    opacity: 0.2;
   }
   .icon {
     color: ${styles.colors.mainWhite};

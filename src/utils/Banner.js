@@ -1,26 +1,23 @@
 import React from 'react'
-import { Text, Stack } from '@chakra-ui/react'
+import { Heading, Text, Stack } from '@chakra-ui/react'
 
-export default function Banner({ title, subtitle1, subtitle2 }) {
+export default function Banner({ title, subtitle}) {
   return (
     <Stack mb={'3rem'} textAlign={'center'} color={'white'} maxW={'100vw'}>
-      <Text
-        fontSize={['4xl', '5xl']}
+      <Heading
+        fontSize={['xl','2xl','3xl', '5xl']}
         as={'h1'}
         noOfLines={'2'}
-        textAlign="center"
-      >
+        textAlign="center">
         {title}
-      </Text>
+      </Heading>
       <Text
         lineHeight={'normal'}
         fontSize={['2xl', '4xl']}
         fontWeight={'400'}
         fontFamily={'Caveat, cursive'}
         textAlign={'center'}
-      >{`${subtitle1}`}
-        <br />
-        {`${subtitle2}`}
+      >{`${subtitle}`}
       </Text>
     </Stack>
   )
@@ -28,6 +25,5 @@ export default function Banner({ title, subtitle1, subtitle2 }) {
 
 Banner.defaultProps = {
   title: 'Quality Construction',
-  subtitle1: 'From concept to completion,',
-  subtitle2: 'we deliver excellence in construction',
+  subtitle: 'From concept to completion, we deliver excellence in construction',
 }
