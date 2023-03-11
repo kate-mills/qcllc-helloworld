@@ -1,8 +1,8 @@
-import React, { Component } from "react"
-import styled from "styled-components"
-import NavbarHeader from "./NavbarHeader"
-import NavbarLinks from "./NavbarLinks"
-import NavbarIcons from "./NavbarIcons"
+import React, { Component } from 'react'
+import styled from 'styled-components'
+import NavbarHeader from './NavbarHeader'
+import NavbarLinks from './NavbarLinks'
+import NavbarIcons from './NavbarIcons'
 
 export default class Navbar extends Component {
   state = {
@@ -25,12 +25,13 @@ export default class Navbar extends Component {
 }
 
 const NavWrapper = styled.nav`
+  padding-inline: 2rem;
   position: absolute;
   background: white;
-  top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  min-height: 70px;
+  z-index: 1;
   @media (min-width: 768px) {
     display: flex;
     align-items: center;

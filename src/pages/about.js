@@ -1,11 +1,11 @@
 import React, { useRef } from 'react'
 import styled from 'styled-components'
-import { motion, useScroll, useSpring, useTransform } from 'framer-motion'
-import { Heading } from '@chakra-ui/react'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { Heading, AspectRatio } from '@chakra-ui/react'
 import Layout from '../components/layout'
 
 function useParallax(value, distance) {
-  return useTransform(arguments[0], [0, 1], [-300, 300])
+  return useTransform(value, [0, 1], [-distance, distance])
 }
 
 function Image({ id }) {
@@ -15,59 +15,57 @@ function Image({ id }) {
 
   return (
     <section>
-      <div ref={ref}>
-        <img
-          className="page-img"
-          src={`/${id}.jpg`}
-          alt="A London skyscraper"
-        />
-      </div>
-      <Heading as={motion.h2} style={{ y }}>{`#00${id}`}</Heading>
+      <AspectRatio ref={ref} maxW='400px' w={300} ratio={4/3}>
+        <img className="page-img" src={`/${id}.jpg`} alt="" />
+      </AspectRatio>
+      <Heading
+        as={motion.h2}
+        style={{ y }}
+        className="animated-h2"
+        color={'var(--chakra-colors-whiteAlpha-900)'}
+        bg={'var(--chakra-colors-uigold-200)'}
+    fontSize={'2xl'}
+      >{`#00${id}`}</Heading>
     </section>
   )
 }
 
-export default function AboutPage(props) {
-  const { scrollYProgress } = useScroll()
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  })
-
+export default function AboutPage() {
   return (
     <Layout>
-      <StyledPage className={props.className}>
-        {[1, 2, 3, 4, 5].map(image => (
-          <Image key={image} id={image} />
-        ))}
-        <motion.div className="progress" style={{ scaleX }} />
+      <StyledPage>
+        {[1, 2, 3, 4, 5].map(image => {
+          return <Image key={image} id={image} />
+        })}
       </StyledPage>
     </Layout>
   )
 }
 
 const StyledPage = styled.div`
-  h2 {
-    margin: 0;
-    left: calc(40% + 130px);
-    position: absolute;
-  }
   section {
-    min-height: 100vh;
+    max-height: 80vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     scroll-snap-align: center;
     perspective: 500px;
-    div {
-      width: 300px;
-      height: 400px;
+
+    background: var(--chakra-colors-uiblue-300);
+    margin-block-end: 40vh;
+
+    h2.animated-h2 {
+      margin: 0;
+      position: absolute;
+      left: calc(50% + 70px);
+      position: absolute;
+    }
+    > div {
+      max-height: 50vh;
       position: relative;
       background: var(--white);
       overflow: hidden;
-      margin: 20px;
       img {
         position: absolute;
         top: 0;
@@ -75,19 +73,9 @@ const StyledPage = styled.div`
         right: 0;
         bottom: 0;
         width: 100%;
-        min-width: 100%;
-        height: auto;
+        height: 100%;
         object-fit: cover;
       }
     }
-  }
-  .progress {
-    width: 100%;
-    position: fixed;
-    left: 0;
-    right: 0;
-    height: 5px;
-    background: var(--primary);
-    bottom: 225px;
   }
 `

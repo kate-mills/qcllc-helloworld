@@ -25,7 +25,7 @@ const ImgCard = ({headingText='', bodyText='',buttonText='Contact Us', url='', i
         </CardBody>
 
         <CardFooter>
-          <Button as={Link} to="/contact" variant="solid" colorScheme="blackAlpha">
+          <Button as={Link} to="/contact" variant="solid" colorScheme="uigold">
             {buttonText}
           </Button>
         </CardFooter>

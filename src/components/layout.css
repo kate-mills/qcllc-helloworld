@@ -1,51 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat');
-
-body{
-  --black: #000000;
-  --ash-black: #222;
-  --white: #fafafa;
-  --sky: #00ccff;
-  --green: #22dddd;
-  --blue: #1300ff;
-  --dusk: #6600ff;
-  --purple: #9900ff;
-  --pink: #ff0066;
-  --red: #fe0222;
-  --orange: #fd7702;
-  --yellow: #ffbb00;
-
-  --background:#d2aa5c;
-  --accent: var(--white);
-  --red:#d2aa5c;
-  --primary: #d2aa5c;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-*{ margin:0; padding:0; box-sizing:border-box; }
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
 ::-webkit-scrollbar {
   height: 5px;
   width: 5px;
   background: var(--white);
 }
+
 ::-webkit-scrollbar-thumb {
-  background: var(--primary);
+  background: var(--chakra-colors-uigold-200);
   -webkit-border-radius: 1ex;
 }
+
 ::-webkit-scrollbar-corner {
   background: var(--white);
 }
-html { scroll-snap-type: y mandatory; }
 
-a{ text-decoration:none; display: contents; }
-main{
-  padding-inline: 5%;
+body {
   position: relative;
+  padding: 10%;
+  padding-inline: 0;
+  padding-block-start: 0;
+  padding-block-end: 10%;
+  border-top: 1px solid var(--chakra-colors-uigold-200);
 }
-main::after{
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  min-height: calc(100% + 227px);
-  content: '';
-  width: 100%;
+
+main {
+  background: var(--chakra-colors-white);
+  min-height: calc(100vh + 170px);
+  padding-inline: 10%;
+  padding-block-end: 170px; /* footer height */
 }

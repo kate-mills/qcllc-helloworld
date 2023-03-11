@@ -1,7 +1,6 @@
-import React, { Component } from "react"
-import styled from "styled-components"
-import { styles } from "../../utils"
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa"
+import React, { Component } from 'react'
+import styled from 'styled-components'
+import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa'
 
 export default class NavbarIcons extends Component {
   state = {
@@ -9,17 +8,17 @@ export default class NavbarIcons extends Component {
       {
         id: 0,
         icon: <FaFacebook className="icon facebook-icon" />,
-        path: "https://www.facebook.com",
+        path: 'https://www.facebook.com',
       },
       {
         id: 1,
-        icon: <FaTwitter className="icon twitter-icon" />,
-        path: "https://www.twitter.com",
+        icon: <FaTwitter className="icon" />,
+        path: 'https://www.twitter.com',
       },
       {
         id: 2,
         icon: <FaInstagram className="icon instagram-icon" />,
-        path: "https://www.instagram.com",
+        path: 'https://www.instagram.com',
       },
     ],
   }
@@ -42,27 +41,17 @@ export default class NavbarIcons extends Component {
     )
   }
 }
-
 const IconWrapper = styled.div`
   .icon {
     font-size: 1.3rem;
     cursor: pointer;
-    ${styles.transFunction()};
-  }
-  .facebook-icon {
-    color: ${styles.colors.icons.facebook};
-  }
-  .twitter-icon {
-    color: ${styles.colors.icons.twitter};
-  }
-  .instagram-icon {
-    color: ${styles.colors.icons.instagram};
-  }
-  .icon:hover {
-    color: ${styles.colors.mainYellow};
+    transition: all 0.5s linear;
+    color: var(--chakra-colors-uigold-500);
+    :hover {
+      color: var(--chakra-colors-uigold-100);
+    }
   }
   display: none;
-
   @media (min-width: 768px) {
     display: flex;
     width: 10rem;
