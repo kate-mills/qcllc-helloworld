@@ -15,23 +15,30 @@ export const Header = () => {
       justifyContent="space-between"
       backgroundColor={'var(--chakra-colors-white)'}
     >
-      <Button p={3} maxW={[124, 200, 250]} as={Link} to="/" variant="none"> <Logo color={'var(--chakra-colors-uigold-500)'} /> </Button>
+      <Button p={3} maxW={[124, 200, 250]} as={Link} to="/" variant="none">
+        {' '}
+        <Logo color={'var(--chakra-colors-uigold-500)'} />{' '}
+      </Button>
       <WrapItem flexWrap="wrap" px={2}>
         <Button
           as={Link}
           to="/contact"
           size="xs"
-          colorScheme="blackAlpha"
-          variant="ghost"
-        >Contact</Button>
+          color={'var(--chakra-colors-blackAlpha-600)'}
+          variant="none"
+        >
+          Contact
+        </Button>
 
         <Button
           as={Link}
           to="/developments"
           size="xs"
-          colorScheme="blackAlpha"
-          variant="ghost"
-        >Developments</Button>
+          color={'var(--chakra-colors-blackAlpha-600)'}
+          variant="none"
+        >
+          Developments
+        </Button>
       </WrapItem>
     </Flex>
   )
