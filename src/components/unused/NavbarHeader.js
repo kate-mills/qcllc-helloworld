@@ -1,8 +1,9 @@
-import React, { Component } from "react"
-import { Link } from "gatsby"
-import logo from "../../images/logo4.svg"
-import { FaAlignRight } from "react-icons/fa"
-import styled from "styled-components"
+import React, { Component } from 'react'
+import { Link } from 'gatsby'
+import { FaAlignRight } from 'react-icons/fa'
+import styled from 'styled-components'
+
+import Logo from '../../images/qclogo'
 
 export default class NavbarHeader extends Component {
   render() {
@@ -10,13 +11,11 @@ export default class NavbarHeader extends Component {
     return (
       <HeaderWrapper>
         <Link to="/">
-          <img src={logo} alt="company name" />
+            <Logo id="nav-logo" color={'var(--chakra-colors-uigold-300)'}/>
         </Link>
         <FaAlignRight
           className="toggle-icon"
-          onClick={() => {
-            handleNavbar()
-          }}
+          onClick={() => { handleNavbar() }}
         />
       </HeaderWrapper>
     )
@@ -24,18 +23,26 @@ export default class NavbarHeader extends Component {
 }
 
 const HeaderWrapper = styled.div`
-  padding: 0.4rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  svg#nav-logo{ max-width: 200px; }
+
+  svg {
+    transition: all 0.5s ease-in-out;
+    color: var(--chakra-colors-uigold-300);
+  }
 
   .toggle-icon {
     font-size: 1.75rem;
-    color: var(--chakra-colors-uigold-200);
     cursor: pointer;
   }
+
   @media (min-width: 768px) {
-    margin: auto auto;
+    svg#nav-logo{ max-width: 300px; }
+
+    #logo {
+    }
     .toggle-icon {
       display: none;
     }

@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
+import Logo from '../Logo'
 
 import {
   Flex,
@@ -18,17 +19,16 @@ export const Header = ()=> {
       minWidth="max-content"
       alignItems="center"
       gap="2"
-      colorScheme="blackAlpha"
     >
-      <Box p="2"><Heading size="md" color="#33333354"><Link to="/">qcllc</Link>
+      <Box p="2"><Heading size="md" color="#8b8b8b"><Link to="/"><Logo fixedWidth="200px"/></Link>
     </Heading>
       </Box>
       <Spacer />
       <ButtonGroup gap="2">
-        <Button as={Link} to="/contact" colorScheme={"blackAlpha"} size="sm">
+        <Button as={Link} to="/contact" colorScheme={"uigold"} size="xs" variant={'ghost'}>
           Contact
         </Button>
-        <Button as={Link} to="/developments" colorScheme={'blackAlpha'} size="sm">
+        <Button as={Link} to="/developments" colorScheme={'uigold'} size="xs" variant={'ghost'}>
           Developments
         </Button>
       </ButtonGroup>

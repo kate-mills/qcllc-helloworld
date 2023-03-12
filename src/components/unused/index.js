@@ -5,9 +5,7 @@ import NavbarLinks from './NavbarLinks'
 import NavbarIcons from './NavbarIcons'
 
 export default class Navbar extends Component {
-  state = {
-    navbarOpen: false,
-  }
+  state = { navbarOpen: false }
   handleNavbar = () => {
     this.setState(() => {
       return { navbarOpen: !this.state.navbarOpen }
@@ -25,13 +23,11 @@ export default class Navbar extends Component {
 }
 
 const NavWrapper = styled.nav`
-  padding-inline: 2rem;
-  position: absolute;
+  scroll-snap-align: none;
   background: white;
-  left: 0;
-  right: 0;
-  min-height: 70px;
   z-index: 1;
+  padding-block: 5%;
+  padding-inline: 8%;
   @media (min-width: 768px) {
     display: flex;
     align-items: center;

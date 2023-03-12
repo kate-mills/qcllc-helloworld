@@ -6,6 +6,7 @@ export const baseTheme = {
     uigrey: `#474747`,
     rgbblack: 'rgb(7 7 7 / .8)',
     uiblack: '#070707',
+    uired: '#6F0422',
     uiblue: {
       50: `#BFBBC2`,
       100: '#C7DEEE',
@@ -22,6 +23,7 @@ export const baseTheme = {
       500: `#998E7A`,
       600: `#3D3C34`,
       700: `#58554C`,
+      800: `#B59855`,
       900: `#13130E`,
     },
   }

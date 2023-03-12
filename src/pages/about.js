@@ -49,8 +49,8 @@ const StyledPage = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    scroll-snap-align: center;
     perspective: 500px;
+    scroll-snap-align: end;
 
     background: var(--chakra-colors-uiblue-300);
     margin-block-end: 40vh;

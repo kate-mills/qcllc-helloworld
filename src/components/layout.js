@@ -1,17 +1,26 @@
 import * as React from 'react'
 /*https://docs.pmnd.rs/react-three-fiber/getting-started/examples#basic-examples*/
 
-import Navbar from './navbar'
+import { Header } from './header'
 
 import { HomeHeader, Banner } from '../utils'
-import Footer from './sfooter'
+import { Footer } from './footer'
 import { Box } from '@chakra-ui/react'
+
+import { motion, useScroll, useSpring } from 'framer-motion'
 
 const Layout = ({ children, ...rest }) => {
   const { hero } = rest
+  const { scrollYProgress } = useScroll()
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  })
+
   return (
     <>
-      <Navbar />
+      <Header />
       {!!hero ? (
         <HomeHeader img={hero}>
           <Banner />
@@ -19,6 +28,11 @@ const Layout = ({ children, ...rest }) => {
       ) : null}
 
       <Box as="main">{children}</Box>
+
+      <Box bg={'var(--chakra-colors-uigold-300)'} minH={'113px'}>
+        <motion.div id="progress" style={{ scaleX }} />
+      </Box>
+
       <Footer />
     </>
   )

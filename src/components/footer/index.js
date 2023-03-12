@@ -1,26 +1,44 @@
 import * as React from 'react'
 
 import { Link } from 'gatsby'
+import Logo from '../Logo'
 
-import { Flex, WrapItem, Text, Button } from '@chakra-ui/react'
+import { Flex, WrapItem, Box, Button } from '@chakra-ui/react'
 
-export const Footer = ()=> {
+export const Footer = () => {
   return (
     <Flex
-      p={5}
+      p={2}
       as="footer"
       alignItems="center"
       justifyContent="space-between"
       boxShadow="xs"
-      backgroundColor={'#f6f6f6'}
+      backgroundColor={'var(--chakra-colors-whiteAlpha-900)'}
+      sx={{ position: 'fixed', bottom: '0', left: '0', right: '0' }}
     >
-        <Text p={3}fontSize="xs">
-          © {new Date().getFullYear()}, Quality Construction LLC
-        </Text>{' '}
+    <Box pl={3}>
+      <Logo fixedWidth={'100'} color={'#8b8b8b'} />
+    </Box>
       <WrapItem flexWrap="wrap" p={3}>
-          <Button as={Link} to="/contact" size="xs" colorScheme="blackAlpha" variant="ghost"> Contact </Button>
-        <Button as={Link} to="/developments" size="xs"  colorScheme='blackAlpha' variant="ghost">Developments</Button>
-
+        <Button
+          as={Link}
+          to="/contact"
+          size="xs"
+          colorScheme="blackAlpha"
+          variant="ghost"
+        >
+          {' '}
+          Contact{' '}
+        </Button>
+        <Button
+          as={Link}
+          to="/developments"
+          size="xs"
+          colorScheme="blackAlpha"
+          variant="ghost"
+        >
+          Developments
+        </Button>
       </WrapItem>
     </Flex>
   )

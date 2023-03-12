@@ -1,11 +1,34 @@
+html {
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  font: sans-serif;
+  overflow-y: scroll;
+  scroll-snap-align: none;
+  overscroll-behavior: auto;
+}
+
+body {
+  margin: 0;
+  word-wrap: break-word;
+  border-top: 1px solid black;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  scroll-snap-type: y mandatory;
+*:before {
+  box-sizing: inherit;
+}
+*:after {
+  box-sizing: inherit;
 }
 
 ::-webkit-scrollbar {
@@ -23,18 +46,19 @@ html {
   background: var(--white);
 }
 
-body {
-  position: relative;
-  padding: 10%;
-  padding-inline: 0;
-  padding-block-start: 0;
-  padding-block-end: 10%;
-  border-top: 1px solid var(--chakra-colors-uigold-200);
-}
-
 main {
   background: var(--chakra-colors-white);
   min-height: calc(100vh + 170px);
   padding-inline: 10%;
-  padding-block-end: 170px; /* footer height */
+  padding-block-end: 113px; /* footer height */
+}
+#progress {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 108px; /* footer height - 5px */
+  width: 100%;
+  height: 5px;
+  z-index: 1;
+  background: var(--chakra-colors-uigold-200);
 }
