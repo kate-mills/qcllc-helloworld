@@ -12,10 +12,7 @@ body {
   word-wrap: break-word;
   border-top: 1px solid black;
   position: relative;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  padding-top: 2px;
   background: white;
 }
 * {
@@ -23,7 +20,6 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-
 *:before {
   box-sizing: inherit;
 }
@@ -47,10 +43,24 @@ body {
 }
 
 main {
-  background: var(--chakra-colors-white);
-  min-height: calc(100vh + 170px);
+  min-height: calc(100vh);
   padding-inline: 10%;
+  padding-block-start: 2rem;
   padding-block-end: 113px; /* footer height */
+}
+
+.bgimg {
+  background: linear-gradient(184deg, black, transparent);
+  padding: 2rem;
+}
+.bgimg h2 {
+  text-align: center;
+  color: var(--chakra-colors-whiteAlpha-900);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-style: italic;
 }
 #progress {
   position: fixed;

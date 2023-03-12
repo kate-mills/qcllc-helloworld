@@ -12,7 +12,7 @@ import {
 import { wrap } from '@motionone/utils'
 import { Text } from '@chakra-ui/react'
 
-function ParallaxText({ children, baseVelocity = 100, numOfChildItems = 8 }) {
+function ParallaxText({ children, baseVelocity = 100, numOfChildItems = 13, fontSize="xl"}) {
   const baseX = useMotionValue(0)
   const { scrollY } = useScroll()
   const scrollVelocity = useVelocity(scrollY)
@@ -49,7 +49,7 @@ function ParallaxText({ children, baseVelocity = 100, numOfChildItems = 8 }) {
           }),
         ].map(i => {
           return (
-            <Text id={i} key={i} fontSize={'5xl'} mr={30}>
+            <Text id={i} key={i} fontSize={fontSize} mr={30}>
               {children}
             </Text>
           )
@@ -60,31 +60,29 @@ function ParallaxText({ children, baseVelocity = 100, numOfChildItems = 8 }) {
 }
 
 export default function ScrollingText({
-  heading1 = `(408) 639 - 8516`,
-  heading2 = 'Schedule a site visit',
+  heading1 = 'Schedule a site visit',
+  heading2 = `(408) 639 - 8516`,
 }) {
   return (
     <StyledParallaxText>
       <div>
-        <ParallaxText baseVelocity={-5}>{heading2}</ParallaxText>
-        <ParallaxText baseVelocity={5}>{heading1}</ParallaxText>
+        <ParallaxText baseVelocity={4}>{heading1}</ParallaxText>
+        <ParallaxText  baseVelocity={-4}>{heading2}</ParallaxText>
       </div>
     </StyledParallaxText>
   )
 }
 
 const StyledParallaxText = styled.section`
-  > div {
-  }
+overflow: hidden;
   .parallax {
     overflow: hidden;
-    letter-spacing: -2px;
     text-transform: uppercase;
     margin: 0;
     white-space: nowrap;
     display: flex;
     flex-wrap: nowrap;
-    line-height: 0.8;
+    line-height: 1;
 
     .scroller {
       display: flex;

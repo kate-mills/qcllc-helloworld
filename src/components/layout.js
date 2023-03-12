@@ -3,11 +3,13 @@ import * as React from 'react'
 
 import { Header } from './header'
 
-import { HomeHeader, Banner } from '../utils'
+import BackgroundImage from './backgroundimage'
 import { Footer } from './footer'
 import { Box } from '@chakra-ui/react'
 
 import { motion, useScroll, useSpring } from 'framer-motion'
+//<HomeHeader img={hero}> <Banner /> </HomeHeader>
+
 
 const Layout = ({ children, ...rest }) => {
   const { hero } = rest
@@ -20,12 +22,9 @@ const Layout = ({ children, ...rest }) => {
 
   return (
     <>
-      <Header />
-      {!!hero ? (
-        <HomeHeader img={hero}>
-          <Banner />
-        </HomeHeader>
-      ) : null}
+<Header /> 
+      
+      {!!hero ? <BackgroundImage image={hero} /> : null}
 
       <Box as="main">{children}</Box>
 
