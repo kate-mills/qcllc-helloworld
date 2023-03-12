@@ -3,6 +3,7 @@ import { extendTheme } from '@chakra-ui/react'
 export const baseTheme = {
 
   colors: {
+    primary: `#bebcc7`,
     uigrey: `#474747`,
     rgbblack: 'rgb(7 7 7 / .8)',
     uiblack: '#070707',

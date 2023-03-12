@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 import Logo from '../Logo'
 
 import { Flex, WrapItem, Button } from '@chakra-ui/react'
+import ContactBtn from '../ContactBtn'
 
 export const Header = () => {
   return (
@@ -13,32 +14,20 @@ export const Header = () => {
       as="header"
       alignItems="center"
       justifyContent="space-between"
-      backgroundColor={'var(--chakra-colors-white)'}
+      backgroundColor={'white'}
     >
-      <Button p={3} maxW={[124, 200, 250]} as={Link} to="/" variant="none">
-        {' '}
-        <Logo color={'var(--chakra-colors-uigold-500)'} />{' '}
+      <Button color={'gray.500'} p={3} maxW={[124, 200, 250]} as={Link} to="/" variant="none">
+        <Logo />
       </Button>
       <WrapItem flexWrap="wrap" px={2}>
-        <Button
-          as={Link}
-          to="/contact"
-          size="xs"
-          color={'var(--chakra-colors-blackAlpha-600)'}
-          variant="none"
-        >
-          Contact
-        </Button>
-
+        <ContactBtn />
         <Button
           as={Link}
           to="/developments"
           size="xs"
-          color={'var(--chakra-colors-blackAlpha-600)'}
+          color={'blackAlpha.500'}
           variant="none"
-        >
-          Developments
-        </Button>
+        >Developments</Button>
       </WrapItem>
     </Flex>
   )

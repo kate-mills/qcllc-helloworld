@@ -26,10 +26,11 @@ export default function Contact() {
             </Box>
           </Container>
         </Stack>
-
-          <Box sx={{overflow: 'hidden'}} bg={'yellow.400'} color={'var(--chakra-colors-uigold-900)'} >
-            <ScrollingText />
-          </Box>
+        <Box
+          sx={{ overflow: 'hidden' }}
+          bg={'gray.200'}>
+          <ScrollingText />
+        </Box>
       </article>
     </Layout>
   )

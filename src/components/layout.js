@@ -28,7 +28,7 @@ const Layout = ({ children, ...rest }) => {
 
       <Box as="main">{children}</Box>
 
-      <Box bg={'var(--chakra-colors-uigold-300)'} minH={'113px'}>
+      <Box bg={'gray.300'} minH={'113px'}>
         <motion.div id="progress" style={{ scaleX }} />
       </Box>
 

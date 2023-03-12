@@ -12,7 +12,7 @@ export default function BgImg({ image, title }) {
             <div
               style={{
                 position: 'absolute',
-                backgroundColor: `rgb(236 201 75/ ${percentage * .5})`,
+                backgroundColor: `rgb(113 128 150/ ${percentage * .5})`,
                 left: '50%',
                 top: '50%',
                 borderRadius: '50%',

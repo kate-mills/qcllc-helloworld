@@ -70,5 +70,5 @@ main {
   width: 100%;
   height: 5px;
   z-index: 1;
-  background: var(--chakra-colors-uigold-200);
+  background: var(--chakra-colors-yellow-900);
 }

@@ -74,7 +74,7 @@ export default function ScrollingText({
 }
 
 const StyledParallaxText = styled.section`
-overflow: hidden;
+  overflow: hidden;
   .parallax {
     overflow: hidden;
     text-transform: uppercase;
