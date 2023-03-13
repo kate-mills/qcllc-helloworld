@@ -2,25 +2,28 @@ import React from 'react'
 import { AnimatePresence } from 'framer-motion'
 import './src/components/layout.css'
 
-export const wrapPageElement = ({ element }) => (
-  <AnimatePresence wait>{element}</AnimatePresence>
-)
+
+export const wrapPageElement = ({element}) => ( <AnimatePresence exitBeforeEnter>{element}</AnimatePresence>);
 
 export const shouldUpdateScroll = ({
   routerProps: { location },
-  getSavedScrollPosition,
+  getSavedScrollPosition
 }) => {
-  if (location.action === 'PUSH') {
-    window.setTimeout(
-      () => window.scrollTo({ top: 0, left: 0, behavior: 'smooth' }),
-      0
-    )
-  } else {
-    const savedPosition = getSavedScrollPosition(location) || [0, 0]
-    window.setTimeout(
-      () => window.scrollTo({ ...savedPosition, behavior: 'smooth' }),
-      0
-    )
+  // transition duration from `layout.js` * 1000 to get time in ms
+  // * 2 for exit + enter animation
+  const TRANSITION_DELAY = 0.3 * 1000 * 2
+
+  // if it's a "normal" route
+  if (location.action === "PUSH") {
+    window.setTimeout(() => window.scrollTo({top: 0, left: 0,  behavior: 'smooth'}), TRANSITION_DELAY)
   }
+
+  // if we used the browser's forwards or back button
+  else {
+    const savedPosition = getSavedScrollPosition(location) || [0, 0]
+
+    window.setTimeout(() => window.scrollTo(...savedPosition), TRANSITION_DELAY)
+  }
+
   return false
 }

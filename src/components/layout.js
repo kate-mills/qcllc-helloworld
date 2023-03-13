@@ -12,12 +12,24 @@ import BgImg from './BgImg'
 const Layout = ({ children, ...rest }) => {
   const { hero } = rest
   const { scrollYProgress } = useScroll()
-  const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001, })
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  })
   return (
     <>
       <Header />
-      {!!hero ? <BgImg image={hero} /> : null}
-      <Box as="main">{children}</Box>
+      <Box
+        as={motion.main}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 1.5 }}
+      >
+        {!!hero ? <BgImg image={hero} /> : null}
+        {children}
+      </Box>
       <Box bg={'gray.300'} minH={'97px'}>
         <motion.div id="progress" style={{ scaleX }} />
       </Box>
