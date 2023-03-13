@@ -3,35 +3,24 @@ import * as React from 'react'
 
 import { Header } from './header'
 
-import BackgroundImage from './backgroundimage'
 import { Footer } from './footer'
 import { Box } from '@chakra-ui/react'
 
 import { motion, useScroll, useSpring } from 'framer-motion'
-//<HomeHeader img={hero}> <Banner /> </HomeHeader>
-
+import BgImg from './BgImg'
 
 const Layout = ({ children, ...rest }) => {
   const { hero } = rest
   const { scrollYProgress } = useScroll()
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  })
-
+  const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001, })
   return (
     <>
-<Header /> 
-      
-      {!!hero ? <BackgroundImage image={hero} /> : null}
-
+      <Header />
+      {!!hero ? <BgImg image={hero} /> : null}
       <Box as="main">{children}</Box>
-
-      <Box bg={'gray.300'} minH={'113px'}>
+      <Box bg={'gray.300'} minH={'97px'}>
         <motion.div id="progress" style={{ scaleX }} />
       </Box>
-
       <Footer />
     </>
   )

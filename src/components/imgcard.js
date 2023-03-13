@@ -1,12 +1,10 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
 import {
   Stack,
   CardBody,
   Heading,
   Text,
   CardFooter,
-  Button,
   Card,
   Image,
 } from '@chakra-ui/react'

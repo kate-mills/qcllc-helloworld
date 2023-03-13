@@ -9,13 +9,12 @@ import ContactBtn from '../ContactBtn'
 export const Footer = () => {
   return (
     <Flex
-      p={2}
       pl={4}
       as="footer"
       alignItems="center"
       justifyContent="space-between"
       boxShadow="xs"
-      backgroundColor="whiteAlpha.600"
+      backgroundColor="whiteAlpha.900"
       sx={{
         position: 'fixed',
         bottom: '0',
@@ -25,7 +24,7 @@ export const Footer = () => {
         backgroundSize: '4px 4px',
       }}
     >
-      <WrapItem color={'whiteAlpha.600'} maxW={124}>
+      <WrapItem color={'blackAlpha.200'} maxW={124}>
         <Logo />
       </WrapItem>
 

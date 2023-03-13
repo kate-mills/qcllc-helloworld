@@ -15,6 +15,7 @@ export const Header = () => {
       alignItems="center"
       justifyContent="space-between"
       backgroundColor={'white'}
+      boxShadow="xs"
     >
       <Button color={'gray.500'} p={3} maxW={[124, 200, 250]} as={Link} to="/" variant="none">
         <Logo />

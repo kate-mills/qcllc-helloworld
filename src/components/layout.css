@@ -30,18 +30,16 @@ body {
 ::-webkit-scrollbar {
   height: 5px;
   width: 5px;
-  background: var(--white);
+  background: var(--chakra-colors-gray-300);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--chakra-colors-uigold-200);
+  background: var(--chakra-colors-gray-500);
   -webkit-border-radius: 1ex;
 }
-
 ::-webkit-scrollbar-corner {
-  background: var(--white);
+  background: var(--chakra-colors-gray-300);
 }
-
 main {
   min-height: calc(100vh);
   padding-inline: 10%;
@@ -53,6 +51,7 @@ main {
   background: linear-gradient(184deg, black, transparent);
   padding: 2rem;
 }
+
 .bgimg h2 {
   text-align: center;
   color: var(--chakra-colors-whiteAlpha-900);
@@ -66,9 +65,9 @@ main {
   position: fixed;
   left: 0;
   right: 0;
-  bottom: 108px; /* footer height - 5px */
+  bottom: 97px; /* footer height - 5px */
   width: 100%;
   height: 5px;
   z-index: 1;
-  background: var(--chakra-colors-yellow-900);
+  background: var(--chakra-colors-gray-500);
 }

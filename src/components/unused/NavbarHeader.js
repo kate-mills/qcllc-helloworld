@@ -3,7 +3,6 @@ import { Link } from 'gatsby'
 import { FaAlignRight } from 'react-icons/fa'
 import styled from 'styled-components'
 
-import Logo from '../../images/qclogo'
 
 export default class NavbarHeader extends Component {
   render() {
@@ -11,7 +10,6 @@ export default class NavbarHeader extends Component {
     return (
       <HeaderWrapper>
         <Link to="/">
-            <Logo id="nav-logo" color={'var(--chakra-colors-uigold-300)'}/>
         </Link>
         <FaAlignRight
           className="toggle-icon"

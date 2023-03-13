@@ -13,7 +13,6 @@ import {
 } from '@chakra-ui/react'
 
 export default function Home({ data }) {
-  console.log(data)
   return (
     <Layout hero={data.file.publicURL}>
       <article>
@@ -71,11 +70,9 @@ export default function Home({ data }) {
             </OrderedList>
           </Box>
           <ImgCard
-            url={data.future.publicURL}
+            url={data.file.publicURL}
             imgWidth="40%"
-            headingText={
-              'Exceeding expectations in every project we undertake.'
-            }
+            headingText={'Exceeding expectations in every project we undertake.'}
             bodyText={`A brief history of the company, its mission statement, and any relevant background information about the company’s founders and leadership team.`}
           />
         </VStack>
@@ -86,7 +83,7 @@ export default function Home({ data }) {
 
 export const query = graphql`
   {
-    file(relativePath: { eq: "on-site.jpg" }) {
+    file(relativePath: { eq: "future.webp" }) {
       publicURL
       childImageSharp {
         gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
@@ -99,7 +96,7 @@ export const query = graphql`
       }
     }
 
-    hero: file(relativePath: { eq: "hero.jpg" }) {
+    hero: file(relativePath: { eq: "hero-burn.jpg" }) {
       publicURL
       childImageSharp {
         gatsbyImageData(
