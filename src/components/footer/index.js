@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import Logo from '../Logo'
 import { Flex, WrapItem, Button } from '@chakra-ui/react'
 
-import ContactBtn from '../ContactBtn'
+import ContactInformationButton from '../ContactInformationButton'
 
 export const Footer = () => {
   return (
@@ -29,7 +29,7 @@ export const Footer = () => {
       </WrapItem>
 
       <WrapItem flexWrap="wrap" p={3} color={'blackAlpha.500'}>
-        <ContactBtn />
+        <ContactInformationButton />
         <Button as={Link} to="/developments" size="xs" variant={'none'}>
           Developments
         </Button>

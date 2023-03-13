@@ -8,7 +8,8 @@ import {
   Card,
   Image,
 } from '@chakra-ui/react'
-import ContactBtn from './ContactBtn'
+
+import ContactInformationButton from './ContactInformationButton'
 
 const ImgCard = ({
   headingText = '',
@@ -46,7 +47,7 @@ const ImgCard = ({
         </CardBody>
 
         <CardFooter>
-          <ContactBtn color={'gray.800'} variant={'outline'} size={'sm'} sx={{background: 'gray.50'}}/>
+          <ContactInformationButton color={'gray.800'} variant={'outline'} size={'sm'} sx={{background: 'gray.50'}}/>
         </CardFooter>
       </Stack>
     </Card>

@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import Logo from '../Logo'
 
 import { Flex, WrapItem, Button } from '@chakra-ui/react'
-import ContactBtn from '../ContactBtn'
+import ContactInformationButton from '../ContactInformationButton'
 
 export const Header = () => {
   return (
@@ -21,7 +21,7 @@ export const Header = () => {
         <Logo />
       </Button>
       <WrapItem flexWrap="wrap" px={2}>
-        <ContactBtn />
+        <ContactInformationButton />
         <Button
           as={Link}
           to="/developments"
